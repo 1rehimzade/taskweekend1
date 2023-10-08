@@ -1,5 +1,5 @@
 ﻿
-                                                            //Task 1
+//Task 1
 //using System;
 
 //public class Student
@@ -82,7 +82,7 @@
 //        student1.GetInfo();
 //    }
 //}
-                                                  //Task 2 class ve method ile
+//Task 2 class ve method ile
 
 //using System;
 
@@ -189,7 +189,7 @@
 //}
 
 
-                                    //Task 3
+//Task 3
 //using System;
 
 //public class Program
@@ -215,7 +215,7 @@
 //        }
 //    }
 //}
-                                         //Task 4
+//Task 4
 //using System;
 
 //public class Program
@@ -277,69 +277,43 @@
 //        Console.WriteLine("Her İki Taraftan Temizlenmiş: " + trimmed);
 //    }
 //}
-                                   //Task 5
+//Task 5
+//int[,] array = CreateTwoDimensionalArray();
 
-//using System;
+//SetArrayElements(array);
 
-//public class MatrisIslemleri
+//PrintArrayElements(array);
+
+//static int[,] CreateTwoDimensionalArray()
 //{
-//    private int[,] matris;
+//    Console.Write("Massivin setr sayini daxil edin: ");
+//    byte rowSize = byte.Parse(Console.ReadLine());
 
-//    public MatrisIslemleri(int satirSayisi, int sutunSayisi)
-//    {
-//        matris = new int[satirSayisi, sutunSayisi];
-//    }
+//    Console.Write("Massivin sutun sayini daxil edin: ");
+//    byte colSize = byte.Parse(Console.ReadLine());
 
-//    public void MatrisiAl()
-//    {
-//        int satirSayisi = matris.GetLength(0);
-//        int sutunSayisi = matris.GetLength(1);
-
-//        Console.WriteLine($"{satirSayisi}x{sutunSayisi} matrisin elementlerini daxil edin:");
-
-//        for (int i = 0; i < satirSayisi; i++)
-//        {
-//            for (int j = 0; j < sutunSayisi; j++)
-//            {
-//                Console.Write($"[{i + 1}, {j + 1}]: ");
-//                matris[i, j] = Convert.ToInt32(Console.ReadLine());
-//            }
-//        }
-//    }
-
-//    public int MatrisCemi()
-//    {
-//        int satirSayisi = matris.GetLength(0);
-//        int sutunSayisi = matris.GetLength(1);
-//        int toplam = 0;
-
-//        for (int i = 0; i < satirSayisi; i++)
-//        {
-//            for (int j = 0; j < sutunSayisi; j++)
-//            {
-//                toplam += matris[i, j];
-//            }
-//        }
-
-//        return toplam;
-//    }
+//    return new int[rowSize, colSize];
 //}
 
-//public class Program
+//static void SetArrayElements(int[,] array)
 //{
-//    public static void Main()
+//    Console.WriteLine("Massivin elementlerini daxil edin:");
+//    for (int i = 0; i < array.GetLength(0); i++)
+//        for (int j = 0; j < array.GetLength(1); j++)
+//        {
+//            Console.Write($"array[{i},{j}]: ");
+//            array[i, j] = int.Parse(Console.ReadLine());
+//        }
+//}
+
+//static void PrintArrayElements(int[,] array)
+//{
+//    Console.WriteLine();
+//    for (int i = 0; i < array.GetLength(0); i++)
 //    {
-//        Console.Write("Matrisin satır sayısını daxil edin: ");
-//        int satirSayisi = Convert.ToInt32(Console.ReadLine());
+//        for (int j = 0; j < array.GetLength(1); j++)
+//            Console.Write($"{array[i, j],-4}");
 
-//        Console.Write("Matrisin sütun sayısını daxil edin: ");
-//        int sutunSayisi = Convert.ToInt32(Console.ReadLine());
-
-//        MatrisIslemleri matrisIslemleri = new MatrisIslemleri(satirSayisi, sutunSayisi);
-
-//        matrisIslemleri.MatrisiAl();
-//        int toplam = matrisIslemleri.MatrisCemi();
-
-//        Console.WriteLine($"Matrisin elementlərinin cemi: {toplam}");
+//        Console.WriteLine();
 //    }
 //}
